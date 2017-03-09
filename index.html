@@ -1,0 +1,26 @@
+<html ng-app="app">
+  <head>
+		<link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div ng-controller="WeatherCtrl">
+      <div ng-show="loading" class='loader'></div>
+      <div ng-show="error" class='error'>
+        <h4>refresh to try again</h4>
+        <small>(we'll need your location to continue)</small>
+      </div>
+      
+      <div ng-show="!loading && !error" back-img="{{background}}">
+        <div class='app'>
+          <h1 class='timezone'>{{timezone}}</h1>
+          <h2 class='temperature'>
+            {{temperature}} <a class='degrees' href='#' ng-click='convertTemperature()'>{{inCelsuis ? ' °C' : ' °F'}}</a>
+          </h2>
+        </div>
+      </div>
+      
+    </div>
+  </body>
+</html>
