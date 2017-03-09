@@ -105,7 +105,7 @@ angular.module('app')
                 'background-image': 'url(' + value +')',
                 'background-size' : 'cover',
                 'top' : '0',
-                'height' : '105vh',
+                'height' : '100vh',
             });
         });
     };
